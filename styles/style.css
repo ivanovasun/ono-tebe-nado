@@ -224,8 +224,8 @@
     grid-column: 1/2;
     background-color: #000000;
     border-radius: 50%;
+    width: 240px;
     height: 240px;
-    width: 240px; 
     margin: 37px 47px 320px;
 }
 

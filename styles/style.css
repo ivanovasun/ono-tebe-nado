@@ -20,7 +20,6 @@
     list-style: circle;
     font-size: 18px;
     font-weight: 400;
-    letter-spacing: 1%;
 }
 
 .header__links-list-item_no-bullit {
@@ -44,11 +43,10 @@
     grid-column: 3/4;
     display: flex;
     flex-direction: column;
-    margin: 5px 25.48px 2px 184px;
+    margin: 5px 25.48px 2px 186px;
     font-size: 18px;
     line-height: 135%;
     font-weight: 400;
-    letter-spacing: 1%;
 }
 
 .cover {
@@ -188,6 +186,9 @@
     justify-content: space-between;
     padding: 51px 40px 48px;
 }
+.card-link {
+    text-decoration: none;
+}
 
 .card__title {
     position: relative;
@@ -216,7 +217,7 @@
     display: grid;
     grid-template-columns: 334px 1fr;
     column-gap: 25px;
-    margin: 146px 24px 30px 24px;
+    margin: 146px 24px 180px 24px;
 }
 
 .about__logo {
@@ -225,7 +226,7 @@
     border-radius: 50%;
     width: 240px; 
     height: 240px;
-    margin: 35px 47px 320px;
+    margin: 37px 47px 320px;
 }
 
 .about__logo-image {
@@ -245,7 +246,7 @@
     font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
-    margin: 136px 0 100px;
+    margin: 138px 0 100px;
 }
 
 .about__text {
@@ -254,7 +255,57 @@
     font-weight: normal;
 }
 
-.about__text_paragrah {
+.about__text_mg {
     margin-bottom: 24px;
     letter-spacing: 0.01em;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 149px 1fr;
+    column-gap: 185px;
+    margin: 0 50px 88px;
+    position: relative;
+    bottom: -3px;
+}
+
+.footer__social-list, .footer__menu-list {
+    list-style: none;
+    color: #000;
+}
+
+.adress__footer {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 135%;
+}
+
+.footer__menu-list {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    width: 149px;
+   align-items: center;
+    font-size: 18px;
+}
+
+.footer__social-list {
+    grid-column: 3/4;
+    display: flex;
+}
+
+.footer__social-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 24px;
+}
+
+.footer__social-icon-yt {
+    margin-left: 0;
+}
+
+.footer__social-icon-pinterest {
+    margin-right: 0;
 }

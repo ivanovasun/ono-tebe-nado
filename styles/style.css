@@ -49,9 +49,12 @@
     font-weight: 400;
 }
 
+address {
+    font-style: normal;
+}
+
 .cover {
     color: #FFFFFF;
-    
 }
 
 .overlay {
@@ -109,6 +112,7 @@
 .cover__description-text {
     text-align: justify;
     font-size: 22px;
+    font-weight: 400;
     line-height: 127%;
     text-transform: uppercase;
     margin: 12px 79px 62px 78px;
@@ -143,6 +147,17 @@
     margin: 27px 24px 30px 24px;
     list-style: none;
     column-gap: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 51px 40px 48px;
+}
+
+.card-link {
+    text-decoration: none;
 }
 
 .card_type_film {
@@ -180,15 +195,6 @@
     background-size: cover;
     background-position: center;
 }
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 51px 40px 48px;
-}
-.card-link {
-    text-decoration: none;
-}
 
 .card__title {
     position: relative;
@@ -202,6 +208,7 @@
 
 .card__text {
     font-size: 20px;
+    font-weight: 400;
     line-height: 120%;
     color: #fff;
 }

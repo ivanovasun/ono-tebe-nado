@@ -33,6 +33,7 @@
 
 .header__link_active {
     text-decoration: none;
+    pointer-events: none;
 }
 
 .header__logo {
@@ -70,11 +71,12 @@
     height: 100%;
 }
 
-.overlay {
-    position: relative;
+.cover::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
@@ -115,6 +117,7 @@
 .cover__description {
     display: grid;
     grid-template-columns: 1fr 306px;
+    position: relative;
 }
 
 .cover__description-text {
@@ -124,12 +127,12 @@
     line-height: 127%;
     text-transform: uppercase;
     margin: 12px 79px 62px 78px;
-    word-spacing: 18.5px; 
+    word-spacing: 18.5px;
 }
 
 .bet-button {
     font-family: Raleway,sans-serif;
-    font-size:22px;
+    font-size: 22px;
     font-weight: normal;
     text-transform: uppercase;
     text-align: center;
@@ -138,6 +141,83 @@
     padding: 12px 32px 11px 31px;
     background-color: transparent;
     border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.bet-button:hover {
+   background-color: rgba(0, 0, 0, 0.6);
+   transition: background-color 0.3s linear;
+   border-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog {
+    border: none;
+    width: 357px;
+    background-image: url(../images/cover.jpg);
+    object-position: center;
+    object-fit: cover;
+    padding: 0;
+    
+}
+
+.overlay {
+    background-color: rgb(0 0 0 / 0.6);
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.close__dialog {
+    color:#FFFFFF;
+    cursor: pointer;
+    margin-left: 305px;
+    margin-top: -25px;
+}
+
+.dialog__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    font-family: Raleway,sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.dialog__content > input {
+    font-family: Raleway,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    border: none;
+}
+
+.dialog__content > input:focus {
+    outline: none;
+}
+
+.dialog__button {
+    margin: 10px 0;
+    width: 100%;
+    background-color: transparent;
+    font-family: Raleway,sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    padding: 10px 15px 10px 15px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.dialog__button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s linear;
+    border-color: rgba(0, 0, 0, 0.6);
 }
 
 .lots__heading {
@@ -161,6 +241,10 @@
     text-decoration: none;
 }
 
+.card-link:hover {
+    color: inherit;
+}
+
 .card {
     position: relative;
     background-repeat: no-repeat;
@@ -170,6 +254,19 @@
     width: 100%;
     height: 100%;
     color: #fff;
+    transition: transform 0.3s;
+}
+
+.card::before {
+    content: '';
+    background-color: rgb(0 0 0 / 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card__text-align {
@@ -179,6 +276,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 51px 40px 48px;
+    position: relative;
 }
 
 .card_type_film {
@@ -296,6 +394,7 @@
 
 .footer__menu-link_active {
     text-decoration: none;
+    pointer-events: none;
 }
 
 .footer__social-list {
@@ -307,4 +406,56 @@
 .footer__social-icon {
     width: 48px;
     height: 48px;
+}
+
+a:hover, link:hover {
+    color: grey;
+}
+
+@media (width <= 575px) {
+    .lots__card-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .card {
+        min-height: 350px;
+    }
+
+    .card__text-align {
+        gap: 25px;
+    }
+
+    .card__title {
+        font-size: 30px;
+    }
+
+    .card__text {
+        font-size: 25px;
+    }
+
+    .about__column {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about__logo {
+        margin: 0;
+        height: 240px;
+        width: 240px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .about__title {
+        margin-top: 0;
+        margin-left: 40px;
+    }
+
+    .about__text {
+        font-size: 25px;
+    }
+
 }

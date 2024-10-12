@@ -28,14 +28,14 @@
           </li>
           <li class="header__links-list-item">
             <a 
-            href="#0"
+            href="#lots_anchor"
             class="header__link">
             посмотреть лоты
           </a>
           </li>
           <li class="header__links-list-item">
             <a 
-            href="#0"
+            href="#about_anchor"
             class="header__link">
             об аукционе
           </a>
@@ -56,7 +56,6 @@
     </header>
     <main>
       <section class="cover">
-        <div class="overlay"> 
          <h1 class="cover__title">
           <span class="aligned-text">о<span class= "letter-spacing-extended">но</span>
           </span>
@@ -70,19 +69,36 @@
           <p class="cover__description-text">Аукцион вещей, в которые никто не верил</p>
           <button 
            class="bet-button"
-           type="button">
+           type="button"
+           onclick="window['dialog-id'].showModal()" 
+           aria-controls="dialog-id">
             Сделать ставку
           </button>
          </div>
-        </div>
+         <dialog id="dialog-id">
+          <div class="overlay">
+            <div class="close__dialog" onclick="window['dialog-id'].close()">X</div>
+              <form class="dialog__content">
+                <label for="identification"> ФИО </label>
+                <input required placeholder="Укажите ваше ФИО" id="identification" type="text" />
+                <label for="email"> Почта</label>
+                <input required placeholder="example@mail.ru" id="email" type="email" />
+                <label for="money"> Размер ставки</label>
+                <input required placeholder="Укажите вашу ставку в рублях" id="money" type="number" />
+              </form>
+          <button class="dialog__button" type="submit" onclick="window['dialog-id'].close()">
+              <span class="button__text">Сделать ставку</span>
+          </button>
+          </div>
+      </dialog>
       </section>
-      <section class="lots">
+      <section id="lots_anchor"
+               class="lots">
         <h2 class="lots__heading">Лоты</h2>
         <ul class="lots__card-list">
           <li class="lots__card-list-item">
               <a href="#0" class="card-link">
                 <article class="card card_type_film">
-                  <div class="overlay">
                     <div class="card__text-align">
                       <h3 class="card__title">
                        Фильм режиссёра, который бросил киношколу
@@ -93,14 +109,12 @@
                        Пол Томас Андерсон?
                       </p>
                     </div>
-                  </div>
                 </article>
               </a> 
           </li>
           <li class="lots__card-list-item">
               <a href="#0" class="card-link">
                 <article class="card card_type_book">
-                  <div class="overlay">
                     <div class="card__text-align">
                       <h3 class="card__title">
                         Книга, где описан один скучный день из жизни рекламного агента
@@ -112,15 +126,13 @@
                         накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» 
                         Джеймса Джойса?
                       </p>
-                    </div>
-                  </div>  
+                    </div> 
                 </article>
               </a>
           </li>
           <li class="lots__card-list-item">
             <a href="#0" class="card-link">
               <article class="card card_type_picture">
-                <div class="overlay">
                   <div class="card__text-align">
                     <h3 class="card__title">
                       Картина, которую повторит даже 5-летний сын маминой подруги
@@ -132,7 +144,6 @@
                       революционных работ Кандинского?
                     </p>
                   </div>
-                </div>
               </article>
             </a>
           </li>
@@ -141,7 +152,8 @@
           посмотреть больше
         </a>
       </section>
-      <section class="about">
+      <section id="about_anchor"
+               class="about">
         <div class="about__column">
           <div class="about__logo">
             <img 
@@ -192,14 +204,14 @@
           </li>
           <li class="footer__menu-list-item">
             <a 
-            href="#0"
+            href="#lots_anchor"
             class="footer__menu-link">
             посмотреть лоты
           </a>
           </li>
           <li class="footer__menu-list-item">
             <a 
-            href="#0"
+            href="#about_anchor"
             class="footer__menu-link">
             об аукционе
           </a>
